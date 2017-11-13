@@ -36,13 +36,13 @@ My pipeline consisted of 9 steps. First, I converted the images to grayscale, th
 
 ![alt text][image2]
 
-Next I created masked edges polygon, deteted straight line edges. 
+Next I created masked edges polygon, detected straight line edges. 
 
 ![alt text][image3]
 
 Next I created another masked edges polygon to connect/average/extrapolate into right and left lane lines. 
 
-![alt text][image4
+![alt text][image4]
 
 Finally I drew the left and right lanes lines on the original image.
 
