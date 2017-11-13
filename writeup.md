@@ -19,9 +19,11 @@ The goals / steps of this project are the following:
 
 [image2]: ./test_images_output/color_edges_solidWhiteCurve.jpg "color_edges"
 
-[image3]: ./test_images_output/line_extended_image_solidWhiteCurve.jpg "line extended"
+[image3]: ./test_images_output/line_image_solidWhiteCurve.jpg "line segments"
 
-[image4]: ./test_images_output/solidWhiteCurve.jpg "color image"
+[image4]: ./test_images_output/line_extended_image_solidWhiteCurve.jpg "line extended"
+
+[image5]: ./test_images_output/solidWhiteCurve.jpg "color image"
 
 
 ---
@@ -30,17 +32,22 @@ The goals / steps of this project are the following:
 
 ### 1. Describe your pipeline. As part of the description, explain how you modified the draw_lines() function.
 
-My pipeline consisted of 9 steps. First, I converted the images to grayscale, then I applied Gaussian smoothing to blur grayscale image.
+My pipeline consisted of 9 steps. First, I converted the images to grayscale, then I applied Gaussian smoothing to blur grayscale image and found Canny edges.
 
 ![alt text][image2]
 
-Next I found Canny edges, created masked edges polygon, deteted straight line edges. 
+Next I created masked edges polygon, deteted straight line edges. 
 
 ![alt text][image3]
 
-Finally I created another masked edges polygon to connect/average/extrapolate into right and left lane lines which I drew on the image. 
+Next I created another masked edges polygon to connect/average/extrapolate into right and left lane lines. 
 
-![alt text][image4]
+![alt text][image4
+
+Finally I drew the left and right lanes lines on the original image.
+
+![alt text][image5]
+
 
 In order to draw a single line on the left and right lanes, I modified the draw_lines() function by finding the slope of each line segment and then finding the average positive slopes and negative slopes (left and right respectively).
 
